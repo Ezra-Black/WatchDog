@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		83C7175F23FA2119002DED1C /* DogSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C7175D23FA2119002DED1C /* DogSearch.storyboard */; };
+		83C7176123FA2156002DED1C /* AllBreeds.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C7176023FA2156002DED1C /* AllBreeds.storyboard */; };
+		83C7176423FA2170002DED1C /* Contact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C7176223FA2170002DED1C /* Contact.storyboard */; };
 		B668586423F9A708007663AB /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668586323F9A708007663AB /* DogViewController.swift */; };
 		B668586623F9AB21007663AB /* MoreDogsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668586523F9AB21007663AB /* MoreDogsTableViewController.swift */; };
 		B668586823F9AB45007663AB /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B668586723F9AB45007663AB /* ContactTableViewController.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		83C7175E23FA2119002DED1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Watch Dog/StoryBoards/Base.lproj/DogSearch.storyboard"; sourceTree = "<group>"; };
+		83C7176023FA2156002DED1C /* AllBreeds.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AllBreeds.storyboard; sourceTree = "<group>"; };
+		83C7176323FA2170002DED1C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Watch Dog/StoryBoards/Base.lproj/Contact.storyboard"; sourceTree = "<group>"; };
 		B668586323F9A708007663AB /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
 		B668586523F9AB21007663AB /* MoreDogsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreDogsTableViewController.swift; sourceTree = "<group>"; };
 		B668586723F9AB45007663AB /* ContactTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83C7175C23FA20EB002DED1C /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				B687EDAD23F9925E00467F0A /* Main.storyboard */,
+				B687EDB223F9925F00467F0A /* LaunchScreen.storyboard */,
+				83C7175D23FA2119002DED1C /* DogSearch.storyboard */,
+				83C7176023FA2156002DED1C /* AllBreeds.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
 		B668586923F9AB4A007663AB /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +117,7 @@
 		B687ED9B23F9925E00467F0A = {
 			isa = PBXGroup;
 			children = (
+				83C7176223FA2170002DED1C /* Contact.storyboard */,
 				B687EDA623F9925E00467F0A /* Watch Dog */,
 				B687EDA523F9925E00467F0A /* Products */,
 			);
@@ -116,10 +134,10 @@
 		B687EDA623F9925E00467F0A /* Watch Dog */ = {
 			isa = PBXGroup;
 			children = (
+				83C7175C23FA20EB002DED1C /* StoryBoards */,
 				B668587523F9B38D007663AB /* Views */,
 				B668587223F9ACF1007663AB /* Helper */,
 				B668587123F9ACED007663AB /* Model */,
-				B687EDAD23F9925E00467F0A /* Main.storyboard */,
 				B687EDB523F9925F00467F0A /* Info.plist */,
 				B668586923F9AB4A007663AB /* View Controllers */,
 				B687EDBB23F9926700467F0A /* Resources */,
@@ -134,7 +152,6 @@
 				B687EDA723F9925E00467F0A /* AppDelegate.swift */,
 				B687EDA923F9925E00467F0A /* SceneDelegate.swift */,
 				B687EDB023F9925F00467F0A /* Assets.xcassets */,
-				B687EDB223F9925F00467F0A /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -198,8 +215,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B687EDB423F9925F00467F0A /* LaunchScreen.storyboard in Resources */,
+				83C7176423FA2170002DED1C /* Contact.storyboard in Resources */,
+				83C7176123FA2156002DED1C /* AllBreeds.storyboard in Resources */,
 				B687EDB123F9925F00467F0A /* Assets.xcassets in Resources */,
 				B687EDAF23F9925E00467F0A /* Main.storyboard in Resources */,
+				83C7175F23FA2119002DED1C /* DogSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +247,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		83C7175D23FA2119002DED1C /* DogSearch.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83C7175E23FA2119002DED1C /* Base */,
+			);
+			name = DogSearch.storyboard;
+			sourceTree = "<group>";
+		};
+		83C7176223FA2170002DED1C /* Contact.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83C7176323FA2170002DED1C /* Base */,
+			);
+			name = Contact.storyboard;
+			sourceTree = "<group>";
+		};
 		B687EDAD23F9925E00467F0A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
