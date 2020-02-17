@@ -18,6 +18,7 @@ class DogViewController: UIViewController  {
             searchBar.becomeFirstResponder()
         }
     }
+    
     var isSearch = false
     var filteredDog = [Dog]()
     
@@ -54,7 +55,7 @@ class DogViewController: UIViewController  {
 extension DogViewController : UICollectionViewDelegate, UICollectionViewDataSource , UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      
-        return 200
+        return filteredDog.count
        
     }
     
@@ -64,7 +65,7 @@ extension DogViewController : UICollectionViewDelegate, UICollectionViewDataSour
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogCell", for: indexPath) as? DogCollectionViewCell
             else { return UICollectionViewCell() }
         
-        self.dogController.fetchAllDogsImage { (action) in
+        self.dogController.fetchAllDogsImage { _ in
             DispatchQueue.main
                 .async {
                     cell.dogImageView.load(url: URL(string: self.dogController.dogs[indexPath.item].image)!)

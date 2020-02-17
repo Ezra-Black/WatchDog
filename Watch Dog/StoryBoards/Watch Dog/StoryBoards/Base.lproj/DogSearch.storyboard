@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sZZ-66-Hh1">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Watch Dog-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DogViewController" customModule="Watch_Dog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search dog breed" translatesAutoresizingMaskIntoConstraints="NO" id="Xfa-DB-Baq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0O0-oA-dgX">
+                                <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OfY-Cg-Nf4">
+                                    <size key="itemSize" width="411" height="669"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogCell" id="KfK-qG-iuY" customClass="DogCollectionViewCell" customModule="Watch_Dog" customModuleProvider="target">
+                                        <rect key="frame" x="1.6666666666666667" y="0.0" width="411" height="669"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XsW-vd-ybT">
+                                            <rect key="frame" x="0.0" y="0.0" width="411" height="669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YMS-zH-17h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="411" height="748"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                            </subviews>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="411" height="669"/>
+                                        <connections>
+                                            <outlet property="dogImageView" destination="YMS-zH-17h" id="Nnh-B1-jAq"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xfa-DB-Baq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6bM-Gg-biz"/>
+                            <constraint firstItem="Xfa-DB-Baq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7pV-hp-9EL"/>
+                            <constraint firstItem="0O0-oA-dgX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="RGC-Aa-uvP"/>
+                            <constraint firstItem="0O0-oA-dgX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Vri-1z-nSO"/>
+                            <constraint firstItem="0O0-oA-dgX" firstAttribute="top" secondItem="Xfa-DB-Baq" secondAttribute="bottom" symbolic="YES" id="gYZ-iF-tYj"/>
+                            <constraint firstItem="0O0-oA-dgX" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kZU-t5-5lC"/>
+                            <constraint firstItem="Xfa-DB-Baq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pBh-fF-YnX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Watch Dog" id="4vb-wO-M7O"/>
+                    <connections>
+                        <outlet property="collectionView" destination="0O0-oA-dgX" id="bHM-jA-aKB"/>
+                        <outlet property="searchBar" destination="Xfa-DB-Baq" id="Qi3-Du-zua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3015.9420289855075" y="135.9375"/>
+        </scene>
+        <!--Dog-->
+        <scene sceneID="S6l-71-O97">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sZZ-66-Hh1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dog" image="wolf-cartoon" id="beR-42-0oo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H2a-jl-YfR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="oTY-dU-hLv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ekC-M6-hzt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077.5999999999999" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wolf-cartoon" width="30" height="30"/>
+    </resources>
+</document>
